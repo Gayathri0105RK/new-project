@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardio Analytics - Predict</title>
+    <style>
+        body {
+            background-color: black;
+            color: red;
+            text-align: center;
+        }
+        form {
+            margin: 0 auto;
+            width: 300px;
+        }
+        label, input, select {
+            display: block;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Enter Patient Data</h1>
+    <form action="/predict" method="post">
+        <label for="age">Age:</label>
+        <input type="number" name="age" required>
+
+        <label for="anaemia">Anaemia:</label>
+        <select name="anaemia" required>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select>
+
+        <label for="creatinine_phosphokinase">CPK:</label>
+        <input type="number" name="creatinine_phosphokinase" required>
+
+        <label for="diabetes">Diabetes:</label>
+        <select name="diabetes" required>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select>
+
+        <label for="ejection_fraction">Ejection Fraction:</label>
+        <input type="number" name="ejection_fraction" required>
+
+        <label for="high_blood_pressure">High Blood Pressure:</label>
+        <select name="high_blood_pressure" required>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select>
+
+        <label for="platelets">Platelets:</label>
+        <input type="number" name="platelets" step="0.1" required>
+
+        <label for="sex">Sex:</label>
+        <select name="sex" required>
+            <option value="1">Male</option>
+            <option value="0">Female</option>
+        </select>
+
+        <label for="serum_creatinine">Serum Creatinine:</label>
+        <input type="number" name="serum_creatinine" step="0.1" required>
+
+        <label for="serum_sodium">Serum Sodium:</label>
+        <input type="number" name="serum_sodium" required>
+
+        <label for="smoking">Smoking:</label>
+        <select name="smoking" required>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select>
+
+        <label for="time">Follow-up Period (days):</label>
+        <input type="number" name="time" required>
+
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
+
+
+
